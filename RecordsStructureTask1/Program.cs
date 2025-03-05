@@ -21,9 +21,9 @@
         static void Main(string[] args)
         {
             Film hulk = new Film("Hulk", "12A", 2005, false);
-            Film ironMan = new Film("Iron Man","12A",2008,false);
+            Film ironMan = new Film("Iron Man", "12A", 2008, false);
             Film antMan = new Film("Ant-Man", "12A", 2015, false);
-            Film[] filmCollection = new Film[] { antMan,hulk,ironMan };
+            Film[] filmCollection = new Film[] { antMan, hulk, ironMan };
             int year = 0;
             int position = 0;
 
@@ -31,9 +31,26 @@
             // Loop through the array of films and check for the newest film
             // Produce one output to say the name of the newest film
 
+            string newest = "";
+            if (hulk.year < ironMan.year && hulk.year < antMan.year)
+            {
+                newest = "Hulk";
+            }
+            else if (ironMan.year < hulk.year && ironMan.year < antMan.year)
+            {
+                newest = "IronMan";
+
+            }
+            else if (antMan.year < hulk.year && antMan.year < ironMan.year)
+            {
+                newest = "Antman";
+            }
+            Console.WriteLine($"The newest film is {newest}");
             // Write the code to update the andMan record to show the film is currently being shown
 
 
-        }
+
+
+        }   
     }
 }
