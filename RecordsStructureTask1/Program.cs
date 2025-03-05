@@ -47,7 +47,7 @@
             }
             Console.WriteLine($"The newest film is {newest}");
             // Write the code to update the andMan record to show the film is currently being shown
-
+            antMan.beingShown = true;
 
 
 
